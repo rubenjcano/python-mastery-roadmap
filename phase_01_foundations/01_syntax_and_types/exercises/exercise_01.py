@@ -76,8 +76,10 @@ def add_tag(tags: list[str] | None, new_tag: str) -> list[str]:
     
     This function must NOT share state between calls.
     """
-    # TODO: implement correctly (avoid mutable default arg bug)
-    ...
+    if tags is None:
+        tags = []
+    tags.append(new_tag)
+    return tags
 
 
 # ─── Tests ──────────────────────────────────────────────────────────────────
