@@ -40,6 +40,11 @@ def flatten_nested(nested: list[list[Any]]) -> list[Any]:
     Example: flatten_nested([[1, 2], [3, 4], [5]]) → [1, 2, 3, 4, 5]
     Hint: list comprehension with inner loop
     """
+    new_list = []
+    for i in nested:
+        for j in i:
+            new_list.append(j)
+    return new_list
             
 
 # ── 3. Unpacking ───────────────────────────────────────────────────────────
