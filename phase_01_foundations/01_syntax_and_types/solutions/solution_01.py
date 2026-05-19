@@ -7,7 +7,7 @@ from typing import Any
 def format_product(name: str, price: float, discount: float) -> str:
     discounted = price * (1 - discount)
     pct = discount * 100
-    return f"{name}: €{price:.2f} → €{discounted:.2f} ({pct:.1f}% off)"
+    return f"{name}: ${price:.2f} -> ${discounted:.2f} ({pct:.1f}% off)"
 
 
 def invert_dict(d: dict[str, int]) -> dict[int, str]:
