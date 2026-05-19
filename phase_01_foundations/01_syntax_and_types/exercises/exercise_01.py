@@ -65,8 +65,9 @@ def safe_divide(a: float, b: float) -> float | None:
     Example: safe_divide(10, 2) → 5.0
              safe_divide(10, 0) → None
     """
-    # TODO: implement this
-    ...
+    if b == 0:
+        return None
+    return a / b
 
 
 # ── 5. Mutable default pitfall ─────────────────────────────────────────────
