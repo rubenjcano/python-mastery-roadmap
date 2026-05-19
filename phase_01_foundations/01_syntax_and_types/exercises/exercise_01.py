@@ -27,6 +27,11 @@ def invert_dict(d: dict[str, int]) -> dict[int, str]:
     Example: invert_dict({"a": 1, "b": 2}) → {1: "a", 2: "b"}
     Hint: dict comprehension
     """
+    result = {}
+    for k, v in d.items():
+        result[v] = k
+    return result
+
 
 
 def flatten_nested(nested: list[list[Any]]) -> list[Any]:
