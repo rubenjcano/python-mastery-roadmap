@@ -15,9 +15,7 @@ def format_product(name: str, price: float, discount: float) -> str:
     
     Hint: use f-string with :.2f for prices and :.1f% for percentage
     """
-    discounted = price * (1 - discount)
-    prc = discount * 100
-    return f"{name}: ${price:.2f} -> ${discounted:.2f} ({prc}% off)"
+
 
 
 # ── 2. List / dict manipulation ────────────────────────────────────────────
@@ -27,7 +25,6 @@ def invert_dict(d: dict[str, int]) -> dict[int, str]:
     Example: invert_dict({"a": 1, "b": 2}) → {1: "a", 2: "b"}
     Hint: dict comprehension
     """
-    return {v: k for k, v in d.items()}
 
 
 def flatten_nested(nested: list[list[Any]]) -> list[Any]:
@@ -36,7 +33,6 @@ def flatten_nested(nested: list[list[Any]]) -> list[Any]:
     Example: flatten_nested([[1, 2], [3, 4], [5]]) → [1, 2, 3, 4, 5]
     Hint: list comprehension with inner loop
     """
-    return [j for i in nested for j in i]
 
 
 
@@ -47,8 +43,6 @@ def first_and_last(items: list[Any]) -> tuple[Any, Any]:
     Example: first_and_last([1, 2, 3, 4, 5]) → (1, 5)
     Hint: first, *_, last = ...
     """
-    first, *_, last = items
-    return first, last
 
 
 
@@ -59,9 +53,6 @@ def safe_divide(a: float, b: float) -> float | None:
     Example: safe_divide(10, 2) → 5.0
              safe_divide(10, 0) → None
     """
-    if b == 0:
-        return None
-    return a / b
 
 
 # ── 5. Mutable default pitfall ─────────────────────────────────────────────
@@ -70,10 +61,6 @@ def add_tag(tags: list[str] | None, new_tag: str) -> list[str]:
     
     This function must NOT share state between calls.
     """
-    if tags is None:
-        tags = []
-    tags.append(new_tag)
-    return tags
 
 
 
