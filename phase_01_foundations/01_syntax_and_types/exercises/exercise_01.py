@@ -70,6 +70,10 @@ def add_tag(tags: list[str] | None, new_tag: str) -> list[str]:
     
     This function must NOT share state between calls.
     """
+    if tags is None:
+        tags = []
+    tags.append(new_tag)
+    return tags
 
 
 
