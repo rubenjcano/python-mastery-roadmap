@@ -15,8 +15,6 @@ def word_frequency(text: str) -> dict[str, int]:
     Hint: str.split(), str.lower(), str.strip(".,!?")
     Use a dict comprehension or Counter.
     """
-    # TODO
-    ...
 
 
 def pythagorean_triples(limit: int) -> list[tuple[int, int, int]]:

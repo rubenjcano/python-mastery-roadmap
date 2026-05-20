@@ -1,16 +1,19 @@
-def flatten_nested(nested: list[list[Any]]) -> list[Any]:
-    """Flatten one level of nesting.
+def word_frequency(text: str) -> dict[str, int]:
+    """Count frequency of each word (lowercased, stripped of punctuation).
     
-    Example: flatten_nested([[1, 2], [3, 4], [5]]) → [1, 2, 3, 4, 5]
-    Hint: list comprehension with inner loop
+    Example: word_frequency("Hello world hello")
+    → {"hello": 2, "world": 1}
+    
+    Hint: str.split(), str.lower(), str.strip(".,!?")
+    Use a dict comprehension or Counter.
     """
-    flatten_nested = []
-    for i in nested:
-        for j in i:
-            flatten_nested.append(j)
-    return flatten_nested
+    
+    text_list = text.split()
+    for i in text_list:
+        i.lower
+    return text_list
 
-nested = [[1, 2], [3, 4], [5]]
-print(flatten_nested(nested))
+text = "Hello world hello"
+print(word_frequency(text))
 
     

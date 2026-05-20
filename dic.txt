@@ -1,0 +1,7 @@
+Sí, porque cada track usa librerías distintas que no están en el base.
+El base ya tiene lo común (pytest, pydantic, rich...). Lo que falta en cada track son las librerías específicas:
+TrackLo que añadeData EngineeringPySpark, dbt, Airflow, Kafka...Data Sciencepandas, Polars, NumPy, Plotly...Machine Learningscikit-learn, PyTorch, XGBoost...AI / LLMsanthropic, langchain, chromadb...Web / APIsfastapi, playwright, uvicorn...Advanced Pythonnumba, memray, py-spy...
+Pero no tienes que instalarlos todos. Solo el del track que estés usando en ese momento.
+Cuando decidas empezar, por ejemplo, con Data Engineering:
+powershelluv pip install -r tracks/data_engineering/requirements.txt
+Y ya. Los demás los instalas cuando llegues a ellos, o simplemente no los instalas si no te interesan.
