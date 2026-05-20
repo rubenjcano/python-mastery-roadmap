@@ -47,6 +47,9 @@ def first_and_last(items: list[Any]) -> tuple[Any, Any]:
     Example: first_and_last([1, 2, 3, 4, 5]) → (1, 5)
     Hint: first, *_, last = ...
     """
+    first, *_, last = items
+    return first, last
+
 
 
 # ── 4. Type conversion & guards ────────────────────────────────────────────
