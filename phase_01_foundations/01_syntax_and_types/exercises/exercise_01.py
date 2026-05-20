@@ -27,10 +27,7 @@ def invert_dict(d: dict[str, int]) -> dict[int, str]:
     Example: invert_dict({"a": 1, "b": 2}) → {1: "a", 2: "b"}
     Hint: dict comprehension
     """
-    result = {}
-    for k, v in d.items():
-        result[v] = k
-    return result
+    return {v: k for k, v in d.items()}
 
 
 def flatten_nested(nested: list[list[Any]]) -> list[Any]:
@@ -39,6 +36,8 @@ def flatten_nested(nested: list[list[Any]]) -> list[Any]:
     Example: flatten_nested([[1, 2], [3, 4], [5]]) → [1, 2, 3, 4, 5]
     Hint: list comprehension with inner loop
     """
+    return [j for i in nested for j in i]
+
 
 
 # ── 3. Unpacking ───────────────────────────────────────────────────────────
