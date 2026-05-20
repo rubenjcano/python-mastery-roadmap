@@ -8,14 +8,16 @@ from typing import Any
 
 # ── 1. f-strings ───────────────────────────────────────────────────────────
 def format_product(name: str, price: float, discount: float) -> str:
-    """Return '<name>: €<original> -> €<discounted> (X% off)'
+    """Return '<name>: $<original> -> $<discounted> (X% off)'
     
     Example: format_product("Laptop", 1200.0, 0.15)
     → "Laptop: $1200.00 → $1020.00 (15.0% off)"
     
     Hint: use f-string with :.2f for prices and :.1f% for percentage
     """
-
+    discounted = price * (1 - discount)
+    prc = discount * 100
+    return f"{name}: ${price:.2f} -> ${discounted:.2f} ({prc}% off)"
 
 
 # ── 2. List / dict manipulation ────────────────────────────────────────────
@@ -25,7 +27,6 @@ def invert_dict(d: dict[str, int]) -> dict[int, str]:
     Example: invert_dict({"a": 1, "b": 2}) → {1: "a", 2: "b"}
     Hint: dict comprehension
     """
-
 
 
 
